@@ -73,10 +73,13 @@ void Error_Handler(void);
 #define SDA_GPIO_Port GPIOA
 #define LED2_Pin GPIO_PIN_13
 #define LED2_GPIO_Port GPIOA
-#define BOOT0LED_Pin GPIO_PIN_15
+#define BOOT0LED_Pin GPIO_PIN_14
 #define BOOT0LED_GPIO_Port GPIOA
-/* USER CODE BEGIN Private defines */
 
+/* USER CODE BEGIN Private defines */
+extern SPI_HandleTypeDef hspi1;
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

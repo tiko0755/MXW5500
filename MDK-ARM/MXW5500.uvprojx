@@ -242,7 +242,7 @@
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
             <Ir1Chk>1</Ir1Chk>
-            <Ir2Chk>1</Ir2Chk>
+            <Ir2Chk>0</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32G031xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G0xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc;../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G0xx/Include;../Drivers/CMSIS/Include;..\..\G0_COMMON\xMisc;..\Core\Src\board;..\..\G0_COMMON\xUartDev;..\..\G0_COMMON\xRs485Dev;..\..\G0_COMMON\xRingBuffer;..\..\G0_COMMON\xCRC16;..\..\G0_COMMON\xIIC_IO;..\..\G0_COMMON\xAt24Cxx;..\..\G0_COMMON\listener;..\..\G0_COMMON\app_timer;..\..\G0_COMMON\cmd_consumer;..\Core\Src\task</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -551,6 +551,171 @@
               <FileName>system_stm32g0xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/system_stm32g0xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/misc</GroupName>
+          <Files>
+            <File>
+              <FileName>gpioDecal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xMisc\gpioDecal.c</FilePath>
+            </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xMisc\misc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/board</GroupName>
+          <Files>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\board\board.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/uart</GroupName>
+          <Files>
+            <File>
+              <FileName>uartDev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xUartDev\uartDev.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/rs485</GroupName>
+          <Files>
+            <File>
+              <FileName>rs485Dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xRs485Dev\rs485Dev.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/gpio_input</GroupName>
+          <Files>
+            <File>
+              <FileName>input.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\gpio_input\input.c</FilePath>
+            </File>
+            <File>
+              <FileName>inputCmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\gpio_input\inputCmd.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/gpio_output</GroupName>
+          <Files>
+            <File>
+              <FileName>output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\gpio_output\output.c</FilePath>
+            </File>
+            <File>
+              <FileName>outputCmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\gpio_output\outputCmd.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/crc16</GroupName>
+          <Files>
+            <File>
+              <FileName>crc16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xCRC16\crc16.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/iic_io</GroupName>
+          <Files>
+            <File>
+              <FileName>IIC_IO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xIIC_IO\IIC_IO.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/at24cxx</GroupName>
+          <Files>
+            <File>
+              <FileName>at24cxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xAt24Cxx\at24cxx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/listener</GroupName>
+          <Files>
+            <File>
+              <FileName>listener.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\listener\listener.c</FilePath>
+            </File>
+            <File>
+              <FileName>listener_instance.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\listener\listener_instance.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/app_timer</GroupName>
+          <Files>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\app_timer\app_timer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/cmd_comsumer</GroupName>
+          <Files>
+            <File>
+              <FileName>cmd_consumer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\cmd_consumer\cmd_consumer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/ringbuffer</GroupName>
+          <Files>
+            <File>
+              <FileName>ring_buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\G0_COMMON\xRingBuffer\ring_buffer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usr/task</GroupName>
+          <Files>
+            <File>
+              <FileName>task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\task\task.c</FilePath>
+            </File>
+            <File>
+              <FileName>led_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\task\led_flash.c</FilePath>
             </File>
           </Files>
         </Group>
